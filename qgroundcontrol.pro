@@ -696,6 +696,7 @@ HEADERS += \
     src/Vehicle/Actuators/Mixer.h \
     src/Vehicle/Actuators/MotorAssignment.h \
     src/Vehicle/CompInfo.h \
+    src/Vehicle/CompInfoActuators.h \
     src/Vehicle/CompInfoEvents.h \
     src/Vehicle/CompInfoParam.h \
     src/Vehicle/CompInfoGeneral.h \
@@ -944,6 +945,7 @@ SOURCES += \
     src/Vehicle/Actuators/Mixer.cc \
     src/Vehicle/Actuators/MotorAssignment.cc \
     src/Vehicle/CompInfo.cc \
+    src/Vehicle/CompInfoActuators.cc \
     src/Vehicle/CompInfoEvents.cc \
     src/Vehicle/CompInfoParam.cc \
     src/Vehicle/CompInfoGeneral.cc \
