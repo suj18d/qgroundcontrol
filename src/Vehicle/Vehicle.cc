@@ -761,7 +761,8 @@ void Vehicle::_mavlinkMessageReceived(LinkInterface* link, mavlink_message_t mes
     {
         mavlink_serial_control_t ser;
         mavlink_msg_serial_control_decode(&message, &ser);
-        emit mavlinkSerialControl(ser.device, ser.flags, ser.timeout, ser.baudrate, QByteArray(reinterpret_cast<const char*>(ser.data), ser.count));
+        emit mavlinkSerialControl(ser.device, ser.flags, ser.timeout, ser.baudrate,
+                QByteArray(reinterpret_cast<const char*>(ser.data), qMin(static_cast<size_t>(ser.count), sizeof(ser.data))));
     }
         break;
 
